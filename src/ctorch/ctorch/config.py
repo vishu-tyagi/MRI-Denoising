@@ -6,9 +6,7 @@ from ctorch.utils.constants import (
     CONV2D,
     MAXPOOL2D,
     CONVTRANSPOSE2D,
-    OUTCONV2D,
-    ADAM,
-    MSE
+    OUTCONV2D
 )
 
 
@@ -37,14 +35,3 @@ class ComplexTorchConfig():
             OUTCONV2D: {"kernel_size": 1, "stride": 1, "padding": 0}
         }
     }
-
-    # Train
-    TRAIN_OPTIMIZER = ADAM
-    TRAIN_CRITERION = MSE
-    TRAIN_BATCH_SIZE = 16
-    TRAIN_LEARNING_RATE = 0.001
-    TRAIN_EPOCHS = 200
-    TRAIN_NUM_WORKERS = 6
-
-    # Evaluation
-    EVALUATION_METRICS = ["PCC", "SSIM"]
