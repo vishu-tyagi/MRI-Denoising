@@ -10,18 +10,14 @@ class Encoder(nn.Module):
         super().__init__()
         self.in_channels = in_channels
         self.hidden_dims = hidden_dims
-        self.params = kw
         self.layers = nn.ModuleList()
-        self._layers_init()
-
-    def _layers_init(self):
         current_dim = self.in_channels
         for i, hdim in enumerate(self.hidden_dims):
             if not i:
-                self.layers.append(DoubleConv(current_dim, hdim, **self.params))
+                self.layers.append(DoubleConv(current_dim, hdim, **kw))
                 current_dim = hdim
                 continue
-            self.layers.append(Down(current_dim, hdim, **self.params))
+            self.layers.append(Down(current_dim, hdim, **kw))
             current_dim = hdim
 
     def forward(self, x: torch.Tensor) -> list[torch.Tensor]:
