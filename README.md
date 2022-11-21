@@ -3,13 +3,13 @@
 K-Space Deep Learning Network for Mouse Brain MR Image Denoising
 
 <p float="center">
-  <img src="/notebooks/images/input_kspace.png" width="300" height="200" />
-  <img src="/notebooks/images/input_mri.png" width="300" height="200" />
+  <img src="/notebooks/images/input_kspace.png" width="300" height="200" align="center" />
+  <img src="/notebooks/images/input_mri.png" width="300" height="200" align="center" />
 </p>
 
 <p float="center">
-  <img src="/notebooks/images/target_kspace.png" width="300" height="200" />
-  <img src="/notebooks/images/target_mri.png" width="300" height="200" />
+  <img src="/notebooks/images/target_kspace.png" width="300" height="200" align="center" />
+  <img src="/notebooks/images/target_mri.png" width="300" height="200" align="center"/>
 </p>
 
 ## Setup to run jupyter notebooks
