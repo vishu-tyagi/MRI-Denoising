@@ -13,7 +13,7 @@ from ctorch.utils.constants import (
 )
 
 
-class UNetModel(nn.Module):
+class Model(nn.Module):
     def __init__(self, config: ComplexTorchConfig):
         super().__init__()
         self.config = config
