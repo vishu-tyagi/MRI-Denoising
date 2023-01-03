@@ -37,7 +37,7 @@ Including the optional -e flag will install package in "editable" mode, meaning 
 
 ### Fetch data
 ```
-python -m sentiment_analysis fetch
+python -m ctorch fetch
 ```
 
 ### Run jupyter server
