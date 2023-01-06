@@ -52,9 +52,19 @@ Total number of trainable parameters: 1,925,988
 
 In all cases, we see that the similarity scores increased. This means the predicted MR images are closer to the ground truth than the input images. Hence, the model succeeded in denoising the input images.
 
+**Notebooks**
+
+The notebooks may be viewed in the following order:
+
+1. *[explore-data.ipynb](notebooks/explore-data.ipynb)* - Explore data and visualize MR Images
+
+2. *[unet-train.ipynb](notebooks/unet-train.ipynb)* - Train UNet
+
+3. *[inference.ipynb](notebooks/inference.ipynb)* - Inference on test dataset using the trained model
+
 **Future Work**
 
-Benchmark this model against other approaches
+Benchmark against other approaches
 
 ## Setup Instructions
 
@@ -83,6 +93,8 @@ Including the optional -e flag will install package in "editable" mode, meaning 
 ```
 python -m ctorch fetch
 ```
+
+Requires AWS credentials. Please email me vt2353@columbia.edu for access.
 
 ### Run jupyter server
 ```
