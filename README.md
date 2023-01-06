@@ -1,6 +1,6 @@
 # Brain-MRI-Denoising
 
-K-Space Deep Learning Network for Mouse Brain MR Image Denoising
+Complex K-Space Deep Learning Network for Mouse Brain MR Image Denoising
 
 <p align="center">
   <img src="/notebooks/images/input_kspace.png" width="300" height="200" />
@@ -11,6 +11,32 @@ K-Space Deep Learning Network for Mouse Brain MR Image Denoising
   <img src="/notebooks/images/target_kspace.png" width="300" height="200" />
   <img src="/notebooks/images/target_mri.png" width="300" height="200" />
 </p>
+
+This is Complex k-space UNet, a variant of the UNet architecture specifically designed for processing complex-valued data, such as data from magnetic resonance imaging (MRI) scans. In MRI, the raw data is collected in the k-space domain, which is a complex-valued representation of the spatial frequency information in the image. The complex k-space UNet is trained to take as input a complex-valued k-space image and output a segmentation mask in the image space.
+
+Data was acquired from Professor Jia Guo at Columbia University
+
+Total number of trainable parameters: 1,925,988
+
+**Loss curve**
+
+<p align="center">
+  <img src="/notebooks/images/loss_curve.png" width="400" height="300" />
+</p>
+
+**Evaluation curves**
+
+<p align="center">
+  <img src="/notebooks/images/psnr_curve.png" width="350" height="250" />
+    <img src="/notebooks/images/pcc_curve.png" width="350" height="250" />
+</p>
+
+<p align="center">
+  <img src="/notebooks/images/ssim_curve.png" width="350" height="250" />
+  <img src="/notebooks/images/scc_curve.png" width="350" height="250" />
+</p>
+
+
 
 ## Setup Instructions
 
