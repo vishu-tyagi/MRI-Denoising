@@ -1,1 +1,1 @@
-from .fetch import (DataClass, KSpaceDataset)
+from .fetch import DataClass

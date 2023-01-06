@@ -12,11 +12,11 @@ K-Space Deep Learning Network for Mouse Brain MR Image Denoising
   <img src="/notebooks/images/target_mri.png" width="300" height="200" />
 </p>
 
-## Setup to run jupyter notebooks
+## Setup Instructions
 
 ### Move into top-level directory
 ```
-cd Brain-MRI-Denoisingn
+cd MRI-Denoising
 ```
 
 ### Install environment
@@ -35,4 +35,14 @@ pip install -e src/complex-torch
 ```
 Including the optional -e flag will install package in "editable" mode, meaning that instead of copying the files into your virtual environment, a symlink will be created to the files where they are.
 
-You can now use the jupyter kernel `ctorch` to run notebooks.
+### Fetch data
+```
+python -m ctorch fetch
+```
+
+### Run jupyter server
+```
+jupyter notebook notebooks/
+```
+
+You can now use the jupyter server or `ctorch` kernel to run notebooks.

@@ -15,7 +15,9 @@ def timing(f):
         te = time()
         time_taken = te - ts
         hours_taken = time_taken // (60 * 60)
+        time_taken %= (60 * 60)
         minutes_taken = time_taken // 60
+        time_taken %= 60
         seconds_taken = time_taken % 60
         if hours_taken:
             message = \
@@ -30,36 +32,3 @@ def timing(f):
         logger.info(message)
         return result
     return wrap
-
-
-def kspace(X: np.ndarray) -> np.ndarray:
-    """
-    Transform k-space array to obtain normalized absolute array
-
-    Args:
-        X (np.ndarray): _description_
-
-    Returns:
-        np.ndarray: Normalized absolute array
-    """
-    Y = np.abs(X)
-    Y = np.average(Y, axis=0)
-    Y = (Y - np.min(Y)) / (np.max(Y) - np.min(Y))
-    return Y
-
-
-def fft(X: np.ndarray) -> np.ndarray:
-    """
-    Fourier transform k-space array to obtain MR image array
-
-    Args:
-        X (np.ndarray): k-space array
-
-    Returns:
-        np.ndarray: MR image array
-    """
-    Y = np.fft.ifftshift(np.fft.ifft2(np.fft.fftshift(X)))
-    Y = np.abs(Y)
-    Y = np.average(Y, axis=0)
-    Y = (Y - np.min(Y)) / (np.max(Y) - np.min(Y))
-    return Y

@@ -2,11 +2,6 @@ import os
 import logging
 from pathlib import Path
 
-import numpy as np
-import torch
-import torch.nn as nn
-from torch.utils.data import Dataset
-
 from ctorch.config import ComplexTorchConfig
 from ctorch.data_access.helpers import s3_download, unzip
 from ctorch.utils.constants import (
@@ -14,7 +9,7 @@ from ctorch.utils.constants import (
     RAW_DIR,
     PROCESSED_DIR,
     MODEL_DIR,
-    SAVED_MODELS_DIR,
+    CHECKPOINTS_DIR,
     REPORTS_DIR,
     TRAIN,
     VAL,
@@ -45,7 +40,7 @@ class DataClass():
             Path(os.path.join(self.data_path, PROCESSED_DIR, VAL, TARGET)),
             Path(os.path.join(self.data_path, PROCESSED_DIR, TEST, INPUT)),
             Path(os.path.join(self.data_path, PROCESSED_DIR, TEST, TARGET)),
-            Path(os.path.join(self.model_path, SAVED_MODELS_DIR)),
+            Path(os.path.join(self.model_path, CHECKPOINTS_DIR)),
             self.reports_path
         ]
         for dir in dirs:
@@ -73,22 +68,3 @@ class DataClass():
         logger.info(
             f"Raw data available for preprocessing {os.path.join(self.data_path, RAW_DIR)}"
         )
-
-
-class KSpaceDataset(Dataset):
-    def __init__(self, input_path: Path, target_path: Path):
-        super().__init__()
-        self.input_path = input_path
-        self.target_path = target_path
-        self.files = sorted(os.listdir(self.input_path))
-
-    def __len__(self):
-        return len(self.files)
-
-    def __getitem__(self, idx):
-        file = self.files[idx]
-        X = np.load(os.path.join(self.input_path, file))
-        Y = np.load(os.path.join(self.target_path, file))
-        X = torch.from_numpy(X)
-        Y = torch.from_numpy(Y)
-        return X, Y
