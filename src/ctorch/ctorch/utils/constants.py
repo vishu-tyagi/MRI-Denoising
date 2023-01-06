@@ -2,8 +2,10 @@ DATA_DIR = "data"
 RAW_DIR = "raw"
 PROCESSED_DIR = "processed"
 MODEL_DIR = "model"
-SAVED_MODELS_DIR = "saved_models"
+CHECKPOINTS_DIR = "checkpoints"
 REPORTS_DIR = "reports"
+ARTEFACTS = "artefacts.npy"
+BEST_MODEL = "best_model.pt"
 
 TRAIN = "Train"
 VAL = "Val"
@@ -29,3 +31,15 @@ CONV2D = "Conv2d_parameters"
 MAXPOOL2D = "MaxPool2d_parameters"
 CONVTRANSPOSE2D = "ConvTranspose2d_parameters"
 OUTCONV2D = "OutConv_Conv2d_parameters"
+
+EPOCH = 0
+TRAIN_LOSS = 1
+VALID_LOSS = 2
+TRAIN_PSNR = 3
+TRAIN_PCC = 4
+TRAIN_SSIM = 5
+TRAIN_SCC = 6
+VALID_PSNR = 7
+VALID_PCC = 8
+VALID_SSIM = 9
+VALID_SCC = 10

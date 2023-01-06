@@ -2,6 +2,8 @@ import logging
 from time import time
 from functools import wraps
 
+import numpy as np
+
 logger = logging.getLogger(__name__)
 
 

@@ -6,4 +6,4 @@
 /data/
 /model/
 out/
-/saved_models
+/checkpoints

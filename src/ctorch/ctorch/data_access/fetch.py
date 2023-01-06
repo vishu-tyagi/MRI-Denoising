@@ -9,7 +9,7 @@ from ctorch.utils.constants import (
     RAW_DIR,
     PROCESSED_DIR,
     MODEL_DIR,
-    SAVED_MODELS_DIR,
+    CHECKPOINTS_DIR,
     REPORTS_DIR,
     TRAIN,
     VAL,
@@ -40,7 +40,7 @@ class DataClass():
             Path(os.path.join(self.data_path, PROCESSED_DIR, VAL, TARGET)),
             Path(os.path.join(self.data_path, PROCESSED_DIR, TEST, INPUT)),
             Path(os.path.join(self.data_path, PROCESSED_DIR, TEST, TARGET)),
-            Path(os.path.join(self.model_path, SAVED_MODELS_DIR)),
+            Path(os.path.join(self.model_path, CHECKPOINTS_DIR)),
             self.reports_path
         ]
         for dir in dirs:
