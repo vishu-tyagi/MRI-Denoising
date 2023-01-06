@@ -36,7 +36,25 @@ Total number of trainable parameters: 1,925,988
   <img src="/notebooks/images/scc_curve.png" width="350" height="250" />
 </p>
 
+**Test Results**
+- Peak Signal to Noise Ratio
+    - Input vs Ground Truth: 37.48
+    - Predicted vs Ground Truth: 38.013
+- Pearson Correlation Coefficient
+    - Input vs Ground Truth: 0.9726
+    - Predicted vs Ground Truth: 0.9804
+- Structural Similarity Index
+    - Input vs Ground Truth: 0.9346
+    - Predicted vs Ground Truth: 0.9617
+- Spearman Correlation Coefficient
+    - Input vs Ground Truth: 0.8738
+    - Predicted vs Ground Truth: 0.8962
 
+In all cases, we see that the similarity scores increased. This means the predicted MR images are closer to the ground truth than the input images. Hence, the model succeeded in denoising the input images.
+
+**Future Work**
+
+Benchmark this model against other approaches
 
 ## Setup Instructions
 
