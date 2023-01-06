@@ -3,13 +3,13 @@
 Complex K-Space Deep Learning Network for Mouse Brain MR Image Denoising
 
 <p align="center">
-  <img src="/notebooks/images/input_kspace.png" width="300" height="200" />
-  <img src="/notebooks/images/input_mri.png" width="300" height="200" />
+  <img src="/notebooks/images/input_k_space.png" width="300" height="200" />
+  <img src="/notebooks/images/input_mr_image.png" width="300" height="200" />
 </p>
 
 <p align="center">
-  <img src="/notebooks/images/target_kspace.png" width="300" height="200" />
-  <img src="/notebooks/images/target_mri.png" width="300" height="200" />
+  <img src="/notebooks/images/target_k_space.png" width="300" height="200" />
+  <img src="/notebooks/images/target_mr_image.png" width="300" height="200" />
 </p>
 
 This is Complex k-space UNet, a variant of the UNet architecture specifically designed for processing complex-valued data, such as data from magnetic resonance imaging (MRI) scans. In MRI, the raw data is collected in the k-space domain, which is a complex-valued representation of the spatial frequency information in the image. The complex k-space UNet is trained to take as input a complex-valued k-space image and output a segmentation mask in the image space.
