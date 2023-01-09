@@ -44,11 +44,7 @@ Total number of trainable parameters: 1,925,988
 
 The table above displays results on test dataset consisting of 1008 samples. For all evaluation metrics, we observe that the similarity scores increased. This means the predicted MR images are closer to the ground truth than the input images. Hence, the model succeeded in denoising the input images.
 
-Here,
-    - PSNR: Peak Signal to Noise Ratio
-    - PCC: Pearson Correlation Coefficient
-    - SSIM: Structural Similarity Index
-    - SCC: Spearman Correlation Coefficient
+Here, PSNR: Peak Signal to Noise Ratio, PCC: Pearson Correlation Coefficient, SSIM: Structural Similarity Index, SCC: Spearman Correlation Coefficient
 
 **Notebooks**
 
