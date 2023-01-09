@@ -39,7 +39,7 @@ Total number of trainable parameters: 1,925,988
 **Test Results**
 
 <p align="center">
-  <img src="/notebooks/images/test_results.png" width="350" height="250" />
+  <img src="/notebooks/images/test_results.png" width="400" height="100" />
 </p>
 
 In all cases, we see that the similarity scores increased. This means the predicted MR images are closer to the ground truth than the input images. Hence, the model succeeded in denoising the input images.
