@@ -88,7 +88,7 @@ Including the optional -e flag will install package in "editable" mode, meaning 
 python -m ctorch fetch
 ```
 
-Requires AWS credentials. Please email me vt2353@columbia.edu for access.
+Requires access to s3 bucket.
 
 ### Run jupyter server
 ```
